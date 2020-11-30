@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tarea21_Mendez_Alves_Alvaro</string>
+    <string-array name="lugares">
+        <item>Teatro del Mercado</item>
+        <item>Casa de Cultura</item>
+        <item>Piscina Municipal</item>
+    </string-array>
+</resources>

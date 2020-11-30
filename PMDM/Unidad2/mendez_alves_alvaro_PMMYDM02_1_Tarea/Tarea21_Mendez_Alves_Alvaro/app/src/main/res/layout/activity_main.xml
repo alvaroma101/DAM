@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_escudo_foreground"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/text_lugar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Selecciona Lugar"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Spinner
+        android:id="@+id/sp_lugar"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_localizacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:text="VER LOCALIZACION"
+        android:textColor="#000000"
+        app:backgroundTint="#AEAEAE"
+        app:layout_constraintLeft_toRightOf="@id/sp_lugar"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/sp_lugar"
+        app:layout_constraintTop_toBottomOf="@+id/sp_lugar"
+        android:text="Precio Entrada" />
+
+    <EditText
+        android:id="@+id/edit_precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:enabled="false"
+        app:layout_constraintLeft_toLeftOf="@id/text_precio"
+        app:layout_constraintTop_toBottomOf="@+id/text_precio" />
+
+    <TextView
+        android:id="@+id/text_entradas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/edit_precio"
+        app:layout_constraintTop_toBottomOf="@+id/edit_precio"
+        android:text="Nº de Entradas a reservar" />
+
+    <EditText
+        android:id="@+id/edit_entradas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/text_entradas"
+        app:layout_constraintTop_toBottomOf="@+id/text_entradas" />
+
+    <TextView
+        android:id="@+id/text_turno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/edit_entradas"
+        app:layout_constraintTop_toBottomOf="@+id/edit_entradas"
+        android:text="Turno" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/text_turno"
+        app:layout_constraintTop_toBottomOf="@+id/text_turno">
+
+        <RadioButton
+            android:id="@+id/radio_mañana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Mañana"
+            tools:layout_editor_absoluteX="97dp"
+            tools:layout_editor_absoluteY="534dp" />
+        <RadioButton
+            android:id="@+id/radio_tarde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tarde"
+            tools:layout_editor_absoluteX="97dp"
+            tools:layout_editor_absoluteY="534dp" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/check_correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Recibir correo de confirmación"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/radio_group"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group" />
+
+    <EditText
+        android:id="@+id/edit_correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/check_correo"
+        app:layout_constraintTop_toBottomOf="@+id/check_correo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
