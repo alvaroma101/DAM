@@ -1,4 +1,4 @@
-package com.example.tarea2_2;
+package com.example.tarea21_mendez_alves_alvaro.bbdd;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,9 +11,13 @@ public class BDListaCompra extends SQLiteOpenHelper {
 
     private Context context;
     //Cadena de creación de la tabla. Añadir los campos necesarios
-    private String CREAR_TABLA="CREATE TABLE...";
+    private String CREAR_TABLA="CREATE TABLE compra (" +
+            "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            "producto TEXT NOT NULL," +
+            "cantidad INTEGER DEFAULT 0," +
+            "precio DECIMAL(6,2) DEFAULT 0.0)";
     //Cadena de eliminación de la tabla. Falta por indicar el nombre de la tabla
-    private String ELIMINAR_TABLA="DROP TABLE IF EXISTS...";
+    private String ELIMINAR_TABLA="DROP TABLE IF EXISTS compra";
 
     public BDListaCompra(Context context) {
         super(context, "BD", null, 1);
