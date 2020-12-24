@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedido xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="albaran.xsd">
+
+	<facturarA>
+	
+			<nombre>miguel</nombre>
+			<calle>animas</calle>
+			<ciudad>montellano</ciudad>
+			<provincia>sevilla</provincia>
+			<codigoPostal>41770</codigoPostal>
+	
+		
+	</facturarA>
+	<comentario>Linea de pedidos</comentario>
+	
+	<articulos>
+		<articulo codigo="872-AA">
+			<nombreProducto>Aspirina</nombreProducto>
+			<cantidad>1</cantidad>
+			<precio>3.6</precio>
+			<comentario>para el dolor de cabeza</comentario>
+			<fechaEnvio>2010-10-10</fechaEnvio>
+		</articulo>
+		
+	</articulos>
+
+</pedido>
+
